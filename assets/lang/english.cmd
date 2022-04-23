@@ -1,0 +1,87 @@
+set "translation.main.title=TicTacToe by DNA"
+set "translation.game.crash=Game crashed^^^^^!"
+
+set "translation.feature.unplanned=%colorRed%Unplanned feature, sorry. It may be added in the future%colorReset%"
+set "translation.feature.soon=%colorRed%This feature will be added soon, stay tuned!%colorReset%"
+set "translation.feature.workInProgress=%colorRed%This feature is in progress, it will probably be out soon%colorReset%"
+
+set "translation.game.greeting=Hello, may you let me know your name?"
+set "translation.game.greeting2=Thank you for telling us your name, %colorYellow%^!playerName^!%colorReset%"
+
+set "translation.main.fullscreen1=###########################################################"
+set "translation.main.fullscreen2=#   Set the game to fullscreen mode for best experience   #"
+set "translation.main.fullscreen3=###########################################################"
+
+set "translation.menuMain.controls1=Press %colorRed%[W]%colorReset% to go up or %colorRed%[S]%colorReset% to go down"
+set "translation.menuMain.controls2=Press %colorRed%[A]%colorReset% or %colorRed%[D]%colorReset% to proceed"
+set "translation.menuMain.button.playOnline=Play online"
+set "translation.menuMain.button.playOffline=Play offline"
+set "translation.menuMain.button.playBot=Kill The Bot"
+set "translation.menuMain.button.language=Language"
+set "translation.menuMain.button.exit=Exit"
+
+set "translation.menuLanguage.singleAvailable=There is %colorYellow%^!language[#]^!%colorReset% language available:"
+set "translation.menuLanguage.multipleAvailable=There are %colorYellow%^!language[#]^!%colorReset% languages available:"
+set "translation.menuLanguage.current=Current"
+set "translation.menuLanguage.promptLanguage=Please enter the language's name, you want to use. Type %colorRed%RELOAD%colorReset% to check for new languages, %colorRed%CANCEL%colorReset% to cancel or %colorRed%REAPPLY%colorReset% to reapply the current language"
+set "translation.menuLanguage.switching=Switching to %colorYellow%^!userLanguage^!%colorReset%..."
+set "translation.menuLanguage.reloading=Reloading, updating languages..."
+set "translation.menuLanguage.cancelling=Cancelling, going back to the menu..."
+set "translation.menuLanguage.reapplying=Reapplying %colorYellow%^!userLanguage^!%colorReset%..."
+set "translation.menuLanguage.notFound=Language not found. %colorRed%^!languageInput^!%colorReset% is not a valid language!"
+
+set "tttHeader1= _______ _      _______            _______            "
+set "tttHeader2=|__   __(_)    |__   __|          |__   __|           "
+set "tttHeader3=   | |   _  ___   | |    __ _  ___   | |    ___   ___ "
+set "tttHeader4=   | |  | |/ __|  | |   / _` |/ __|  | |   / _ \ / _ \"
+set "tttHeader5=   | |  | | (__   | |  | (_| | (__   | |  | (_) |  __/"
+set "tttHeader6=   |_|  |_|\___|  |_|   \__,_|\___|  |_|   \___/ \___|"
+
+set "playerSign_1=      "
+set "playerSign_2=      "
+set "playerSign_3=      "
+
+set "playerSign-1=x====x"
+set "playerSign-2=|    |"
+set "playerSign-3=x====x"
+
+set "playerSignX1=\\  //"
+set "playerSignX2=  ><  "
+set "playerSignX3=//  \\"
+
+set "playerSignO1=//¯¯\\"
+set "playerSignO2=||  ||"
+set "playerSignO3=\\__//"
+
+set "translation.game.turn=It's %colorYellow%^!playerTurnSign^!%colorReset%'s turn."
+set "translation.gameBot.name.bot=Botcreator [Bot]"
+
+set "translation.offline.win.x1=__   __   __          ______  _   _ _  "
+set "translation.offline.win.x2=\ \ / /   \ \        / / __ \| \ | | | "
+set "translation.offline.win.x3= \ V /     \ \  /\  / / |  | |  \| | | "
+set "translation.offline.win.x4=  > <       \ \/  \/ /| |  | | . ` | | "
+set "translation.offline.win.x5= / . \       \  /\  / | |__| | |\  |_| "
+set "translation.offline.win.x6=/_/ \_\       \/  \/   \____/|_| \_(_) "
+
+set "translation.offline.win.o1=  ____     __          ______  _   _ _ "
+set "translation.offline.win.o2= / __ \    \ \        / / __ \| \ | | |"
+set "translation.offline.win.o3=| |  | |    \ \  /\  / / |  | |  \| | |"
+set "translation.offline.win.o4=| |  | |     \ \/  \/ /| |  | | . ` | |"
+set "translation.offline.win.o5=| |__| |      \  /\  / | |__| | |\  |_|"
+set "translation.offline.win.o6= \____/        \/  \/   \____/|_| \_(_)"
+
+set "translation.offline.win.bot1= ____   ____ _______   __          ______  _   _ _ "
+set "translation.offline.win.bot2=|  _ \ / __ \__   __|  \ \        / / __ \| \ | | |"
+set "translation.offline.win.bot3=| |_) | |  | | | |      \ \  /\  / / |  | |  \| | |"
+set "translation.offline.win.bot4=|  _ <| |  | | | |       \ \/  \/ /| |  | | . ` | |"
+set "translation.offline.win.bot5=| |_) | |__| | | |        \  /\  / | |__| | |\  |_|"
+set "translation.offline.win.bot6=|____/ \____/  |_|         \/  \/   \____/|_| \_(_)"
+
+set "translation.offline.win.tie1= _______ _____ ______ "
+set "translation.offline.win.tie2=|__   __|_   _|  ____|"
+set "translation.offline.win.tie3=   | |    | | | |__   "
+set "translation.offline.win.tie4=   | |    | | |  __|  "
+set "translation.offline.win.tie5=   | |   _| |_| |____ "
+set "translation.offline.win.tie6=   |_|  |_____|______|"
+
+set "translation.offline.controls=Press %colorRed%[R]%colorReset% to retry or %colorRed%[E]%colorReset% to exit"
