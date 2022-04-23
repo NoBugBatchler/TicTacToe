@@ -1,2 +1,3 @@
-# Auto detect text files and perform LF normalization
+#Shit being weird
 * text=auto
+*.* text eol=crlf
