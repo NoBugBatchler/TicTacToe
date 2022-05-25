@@ -109,7 +109,7 @@ if not defined playerName (
       cls
       if defined playerName (
             echo %translation.game.greeting2%
-            sleep 2s
+            sleep 2 s
       ) else (
             goto promptUserName
       )

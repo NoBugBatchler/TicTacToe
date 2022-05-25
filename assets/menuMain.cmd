@@ -71,7 +71,7 @@ goto display
 :getLength
 set "s=#%~1"
 set "len=0"
-for %%N in (4096 2048 1024 512 256 128 64 32 16 8 4 2 1) do (
+for %%N in ( 4096 2048 1024 512 256 128 64 32 16 8 4 2 1 ) do (
 	if "!s:~%%N,1!" neq "" (
 		set /a "len+=%%N"
 		set "s=!s:~%%N!"
@@ -82,7 +82,9 @@ exit /b
 
 :action1
 cls
-echo %translation.feature.unplanned%
+call boardOnline.cmd
+goto getOptions
+
 pause >nul
 goto getOptions
 
@@ -101,12 +103,12 @@ cls
 
 ::Add tabcomplete
 :getLanguages
-pushd lang
 if not exist tabcomplete\ ( md tabcomplete )
 del /f /q tabcomplete\*
 echo Tabcomplete asset>tabcomplete\CANCEL
 echo Tabcomplete asset>tabcomplete\REAPPLY
 echo Tabcomplete asset>tabcomplete\RELOAD
+pushd lang
 
 ::Search for language files and save them in their variable
 for /f "delims=" %%A in ('2^>nul set language[') do (
@@ -116,8 +118,9 @@ set /a "language[#]=0"
 for /f "delims=" %%A in ('2^>nul dir *.cmd /b') do (
       set /a "language[#]+=1"
       set "language[!language[#]!]=%%~nA"
-      echo Tabcomplete asset>tabcomplete\%%~nA
+      echo Tabcomplete asset>..\tabcomplete\%%~nA
 )
+popd
 
 ::Output the languages
 :echoLanguages
@@ -147,7 +150,7 @@ if !languageAvailable!==0 for /l %%A in (1,1,!language[#]!) do if !languageInput
 ::Switch to the user language
 if !languageAvailable!==1 (
       echo %translation.menuLanguage.switching%
-      ..\sleep 2 s
+      sleep 2 s
       call !userLanguage!.cmd
       call :getOptions exitAfter
 )
@@ -155,9 +158,8 @@ if !languageAvailable!==1 (
 ::Check for reload
 if !languageAvailable!==0 if !languageInput!==RELOAD (
       echo %translation.menuLanguage.reloading%
-      ..\sleep 2 s
+      sleep 2 s
       set "languageAvailable=1"
-      popd
       cls
       goto getLanguages
 )
@@ -165,18 +167,17 @@ if !languageAvailable!==0 if !languageInput!==RELOAD (
 ::Check for cancel
 if !languageAvailable!==0 if !languageInput!==CANCEL (
       echo %translation.menuLanguage.cancelling%
-      ..\sleep 2 s
+      sleep 2 s
       set "languageAvailable=1"
 )
 
 ::Check for reapply
 if !languageAvailable!==0 if !languageInput!==REAPPLY (
       echo %translation.menuLanguage.reapplying%
-      ..\sleep 2 s
+      sleep 2 s
       set "languageAvailable=1"
       call !userLanguage!.cmd
 )
-popd
 
 if !languageAvailable!==0 (
       echo %translation.menuLanguage.notFound%

@@ -86,7 +86,7 @@ for /l %%A in (1,1,3) do (
             set /a "rowSecondField=%%A*3-1" && for %%C in (!rowSecondField!) do ( set "rowSecondField=!gameField[%%C]!" )
             set /a "rowThirdField=%%A*3" && for %%C in (!rowThirdField!) do ( set "rowThirdField=!gameField[%%C]!" )
 
-            if !rowFirstField! equ 0 if not !gamePlaceSelection! equ !displayCounter! (
+            if !rowFirstField! equ 0 if not !gamePlaceSelection! equ !displayCounter! if ! (
                   set "displayRow1=!playerSign_1!"
                   set "displayRow2=!playerSign_2!"
                   set "displayRow3=!playerSign_3!"
@@ -117,7 +117,7 @@ for /l %%A in (1,1,3) do (
             )
             set /a "displayCounter+=1"
 
-            if !rowSecondField! equ 0 if not !gamePlaceSelection! equ !displayCounter! (
+            if !rowSecondField! equ 0 if not !gamePlaceSelection! equ !displayCounter! if ! (
                   set "displayRow1=!displayRow1! | !playerSign_1!"
                   set "displayRow2=!displayRow2! | !playerSign_2!"
                   set "displayRow3=!displayRow3! | !playerSign_3!"
@@ -148,7 +148,7 @@ for /l %%A in (1,1,3) do (
             )
             set /a "displayCounter+=1"
 
-            if !rowThirdField! equ 0 if not !gamePlaceSelection! equ !displayCounter! (
+            if !rowThirdField! equ 0 if not !gamePlaceSelection! equ !displayCounter! if ! (
                   set "displayRow1=!displayRow1! | !playerSign_1!"
                   set "displayRow2=!displayRow2! | !playerSign_2!"
                   set "displayRow3=!displayRow3! | !playerSign_3!"
