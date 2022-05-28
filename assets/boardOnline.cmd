@@ -1,5 +1,6 @@
 ::Set online server address
 if not defined onlineServer set "onlineServer=dnascanner.dynv6.net:3000"
+if exist ..\SERVER ( set /p onlineServer=<..\SERVER )
 
 ::Check if server is up
 set "onlineServerStatus="
@@ -9,7 +10,7 @@ if defined onlineServerStatus (
       sleep 1 s
 ) else (
       echo %translation.online.failed%
-      sleep 3 s
+      sleep 4 s
       exit /b
 )
 

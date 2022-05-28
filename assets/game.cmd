@@ -1,5 +1,5 @@
 @echo off
-set "translation.game.crash=Game crashed^!"
+set "translation.game.crash=Game crashed^^^!"
 setlocal enabledelayedexpansion
 setlocal enableextensions
 set /a "gameVersion=1"
