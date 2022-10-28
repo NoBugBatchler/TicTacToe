@@ -126,3 +126,32 @@ color: rgb(0, 255, 0) !important;
 #turn-text {
 	margin-top: 4rem;
 }
+
+#back-arrow {
+	position: absolute;
+	left: 0.5rem;
+	top: 0.5rem;
+	width: 5rem;
+	height: 5rem;
+}
+
+#arrow-backplate {
+	transition: 0.2s;
+	background-color: rgb(209, 209, 209);
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	left: 2rem;
+	top: 1rem;
+	border-radius: 1rem;
+}
+
+#arrow-backplate:hover {
+	transition: 0.2s;
+	transform: translate(0%) scale(0.8);
+}
+
+.back-arrow-ani {
+	transition: 0.35s;
+	left: -10rem !important;
+}
