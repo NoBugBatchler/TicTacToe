@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<script src="./src/end.js" defer></script>
+		<link rel="stylesheet" href="./src/end.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TicTacToe</title>
+	</head>
+	<body>
+		<div id="confettis">
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+			<div class="confetti"></div>
+		</div>
+		<div id="arrow-backplate"><img src="./src/arrow.svg" alt="" id="back-arrow" onclick="clickToBack()" /></div>
+		<h1 id="header">TicTacToe</h1>
+		<div id="match-board">
+			<div id="line-end" class="blank"></div>
+			<div id="match-row1">
+				<img src="./src/blank.svg" alt="" id="p0" onclick="setPoint(0)" />
+				<img src="./src/blank.svg" alt="" id="p1" onclick="setPoint(1)" />
+				<img src="./src/blank.svg" alt="" id="p2" onclick="setPoint(2)" />
+			</div>
+			<div id="match-row2">
+				<img src="./src/blank.svg" alt="" id="p3" onclick="setPoint(3)" />
+				<img src="./src/blank.svg" alt="" id="p4" onclick="setPoint(4)" />
+				<img src="./src/blank.svg" alt="" id="p5" onclick="setPoint(5)" />
+			</div>
+			<div id="match-row3">
+				<img src="./src/blank.svg" alt="" id="p6" onclick="setPoint(6)" />
+				<img src="./src/blank.svg" alt="" id="p7" onclick="setPoint(7)" />
+				<img src="./src/blank.svg" alt="" id="p8" onclick="setPoint(8)" />
+			</div>
+		</div>
+		<h1 id="idk-how-the-fuck-i-should-call-this-please-let-me-out-of-your-basement"></h1>
+		<h1 id="winner"></h1>
+	</body>
+</html>
