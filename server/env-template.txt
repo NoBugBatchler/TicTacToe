@@ -1,3 +1,0 @@
-PORT             = 3000
-PASSWORD         = "safe-password"
-TIMEOUT_DURATION = 5 # Minutes
