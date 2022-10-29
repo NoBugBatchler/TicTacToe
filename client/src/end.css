@@ -163,11 +163,11 @@ body {
 }
 
 .vertical-left {
-	left: 12.6rem !important;
+	margin-inline: -8rem !important;
 }
 
 .vertical-right {
-	left: 31.1rem !important;
+	margin-inline: 10.5rem !important;
 }
 
 .blank {
@@ -478,10 +478,10 @@ yellow {
 }
 
 .vertical-left {
-	left: 4.7rem !important;
+	margin-inline: -6rem !important;
 }
 
 .vertical-right {
-	left: 17rem !important;
+	margin-inline: 6.4rem !important;
 }
 }
