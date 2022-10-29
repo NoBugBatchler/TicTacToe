@@ -140,3 +140,36 @@ body {
 	font-size: 2.5rem;
 	color: rgb(255, 255, 255, 0.5);
 }
+
+@media (max-width: 790px) {
+	#back-arrow {
+		position: absolute;
+		left: 0.5rem;
+		bottom: 0.5rem;
+		width: 5rem;
+		height: 5rem;
+	}
+	
+	#arrow-backplate {
+		transition: 0.2s;
+		background-color: rgb(209, 209, 209);
+		position: absolute;
+		width: 6rem;
+		height: 6rem;
+		left: 2rem;
+		top: 87%;
+		border-radius: 1rem;
+	}
+
+	.user {
+		transition: 0.2s;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-bottom: 1rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		font-size: 0.8rem;
+	}
+}

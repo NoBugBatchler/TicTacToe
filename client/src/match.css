@@ -127,6 +127,8 @@ color: rgb(0, 255, 0) !important;
 	margin-top: 4rem;
 }
 
+
+
 #back-arrow {
 	position: absolute;
 	left: 0.5rem;
@@ -154,4 +156,104 @@ color: rgb(0, 255, 0) !important;
 .back-arrow-ani {
 	transition: 0.35s;
 	left: -10rem !important;
+}
+
+@media (max-width: 500px) {
+
+	#back-arrow {
+		position: absolute;
+		left: 0.5rem;
+		top: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+	}
+	
+	#arrow-backplate {
+		transition: 0.2s;
+		background-color: rgb(209, 209, 209);
+		position: absolute;
+		width: 5rem;
+		height: 5rem;
+		left: 2rem;
+		top: 1rem;
+		border-radius: 1rem;
+	}
+
+	#header {
+		font-size: 3rem;
+		padding-bottom: 3rem;
+		margin-bottom: 1rem;
+		margin-left: 30%;
+	}
+
+	#match-board {
+		background-size: 20rem;
+	}
+
+	#match-row1 {
+		padding-top: 6.5rem;
+		padding-left: auto;
+		padding-right: auto;
+	}
+	#match-row2 {
+		padding-top: 2.1rem;
+		padding-left: auto;
+		padding-right: auto;
+	}
+	#match-row3 {
+		padding-top: 2rem;
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+	#p0 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 2rem;
+}
+
+#p1 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 1.9rem;
+}
+
+#p2 {
+	transition: 0.4s;
+	width: 4rem;
+}
+
+#p3 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 2rem;
+}
+
+#p4 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 1.9rem;
+}
+
+#p5 {
+	transition: 0.4s;
+	width: 4rem;
+}
+
+#p6 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 2rem;
+}
+
+#p7 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 1.9rem;
+}
+
+#p8 {
+	transition: 0.4s;
+	width: 4rem;
+}
 }
