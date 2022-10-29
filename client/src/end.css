@@ -60,7 +60,7 @@ body {
 }
 
 #match-row1 {
-	padding-top: 2rem;
+	padding-top: 2.4rem;
 	padding-left: auto;
 	padding-right: auto;
 }
@@ -129,7 +129,7 @@ body {
 #line-end {
 	transition: 0.8s;
 	background-color: rgb(89, 0, 116);
-	left: 49%;
+	left: 48%;
 	top: 9.5rem;
 	position: absolute;
 	width: 2rem;
@@ -138,7 +138,7 @@ body {
 }
 
 .diagonal-right {
-	top: 9rem !important;
+	top: 8.7rem !important;
 	transform: rotate(45deg);
 }
 
@@ -153,21 +153,21 @@ body {
 }
 
 .horizontal-top {
-	top: 0rem !important;
+	top: -0.3rem !important;
 	transform: rotate(90deg);
 }
 
 .horizontal-bottom {
-	top: 17.5rem !important;
+	top: 18rem !important;
 	transform: rotate(90deg);
 }
 
 .vertical-left {
-	left: 40% !important;
+	margin-inline: -8rem !important;
 }
 
 .vertical-right {
-	left: 57.7% !important;
+	margin-inline: 10.5rem !important;
 }
 
 .blank {
@@ -342,4 +342,146 @@ yellow {
 	left: 100%;
 	animation-delay: -0.1s;
 	background-color: #f9c4ea;
+}
+
+@media (max-width: 500px) {
+
+	#idk-how-the-fuck-i-should-call-this-please-let-me-out-of-your-basement {
+		padding-top: 0rem;
+	}
+
+	#back-arrow {
+		position: absolute;
+		left: 0.5rem;
+		top: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+	}
+	
+	#arrow-backplate {
+		transition: 0.2s;
+		width: 5rem;
+		height: 5rem;
+	}
+
+	#header {
+		font-size: 3rem;
+		padding-bottom: 3rem;
+		margin-bottom: 1rem;
+		margin-left: 30%;
+	}
+
+	#match-board {
+		background-size: 20rem;
+	}
+
+	#match-row1 {
+		padding-top: 6.5rem;
+		padding-left: auto;
+		padding-right: auto;
+	}
+	#match-row2 {
+		padding-top: 2.1rem;
+		padding-left: auto;
+		padding-right: auto;
+	}
+	#match-row3 {
+		padding-top: 2rem;
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+	#p0 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 2rem;
+}
+
+#p1 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 1.9rem;
+}
+
+#p2 {
+	transition: 0.4s;
+	width: 4rem;
+}
+
+#p3 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 2rem;
+}
+
+#p4 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 1.9rem;
+}
+
+#p5 {
+	transition: 0.4s;
+	width: 4rem;
+}
+
+#p6 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 2rem;
+}
+
+#p7 {
+	transition: 0.4s;
+	width: 4rem;
+	padding-right: 1.9rem;
+}
+
+#p8 {
+	transition: 0.4s;
+	width: 4rem;
+}
+#line-end {
+	transition: 0.8s;
+	background-color: rgb(89, 0, 116);
+	left: 46.67%;
+	top: 14.45rem;
+	position: absolute;
+	width: 1.5rem;
+	height: 20rem;
+	border-radius: 5rem;
+}
+
+.diagonal-right {
+	top: 14.1rem !important;
+	transform: rotate(45deg);
+}
+
+.diagonal-left {
+	top: 14.1rem !important;
+	transform: rotate(-45deg);
+}
+
+.horizontal {
+	top: 14rem !important;
+	transform: rotate(90deg);
+}
+
+.horizontal-top {
+	top: 7.9rem !important;
+	transform: rotate(90deg);
+}
+
+.horizontal-bottom {
+	top: 20.1rem !important;
+	transform: rotate(90deg);
+}
+
+.vertical-left {
+	margin-inline: -6rem !important;
+}
+
+.vertical-right {
+	margin-inline: 6.4rem !important;
+}
 }

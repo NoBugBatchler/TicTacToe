@@ -248,3 +248,64 @@ body {
 	transition: 0.3s;
 	border: solid rgb(255, 0, 0) !important;
 }
+
+@media (max-width: 1330px) {
+
+	#header {
+		margin-top: 5%;
+		font-size: 3rem;
+	}
+	
+
+	#custom-server-current {
+		font-size: 1rem;
+		margin-bottom: 3rem;
+		color: rgb(150, 150, 150);
+	}
+
+	#custom-server-input {
+		width: 90%;
+		height: 10%;
+		font-size: 1rem;
+		top: 50%;
+		padding-top: 10%;
+		padding-bottom: 20%;
+	}
+
+	#custom-server-input.hidden {
+		transition: 0.4s;
+		top: 300%;
+	}
+
+	#custom-server-input-login-button {
+		transition: 0.3s;
+		font-size: 1.9rem;
+		width: 15rem;
+		height: 3rem;
+	}
+
+	body {
+		padding-top: 2rem;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 1020px) {
+	#custom-server-input {
+		padding-top:10%;
+		padding-bottom: 40%;
+	}
+}
+
+@media (max-width: 570px) {
+	#custom-server-input {
+		font-size: 0.6rem;
+		padding-top:10%;
+		padding-bottom: 60%;
+	}
+
+	#custom-server-input-header {
+		text-align: left;
+		margin-left: 12%;
+	}
+}
