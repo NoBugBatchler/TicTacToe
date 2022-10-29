@@ -5,3 +5,5 @@
 /server/node_modules
 /server/.env
 /server/data.json
+/server/ssl/cert.pem
+/server/ssl/key.pem

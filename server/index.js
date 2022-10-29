@@ -7,6 +7,8 @@ import {} from "dotenv/config";
 import express from "express";
 import cors from "cors";
 import fs from "fs";
+import http from "http";
+import https from "https";
 
 const app = express();
 const router = express.Router();
@@ -14,6 +16,17 @@ const router = express.Router();
 let users = [];
 let matches = [];
 let antiRequestSpam = [];
+
+let sslCredentials = {}
+let sslEnabled = false;
+
+if (fs.existsSync("ssl/key.pem") && fs.existsSync("ssl/cert.pem")) {
+	sslCredentials = {
+		key: fs.readFileSync("ssl/key.pem", "utf8"),
+		cert: fs.readFileSync("ssl/cert.pem", "utf8"),
+	};
+	sslEnabled = true;
+}
 
 fs.existsSync("restart.js") ? fs.unlinkSync("restart.js") : null;
 
@@ -798,10 +811,6 @@ router.post("/checkpassword", (req, res) => {
 	});
 });
 
-app.listen(process.env.PORT, () => {
-	console.log(`Server is running on port ${process.env.PORT}`);
-});
-
 setInterval(async () => {
 	users = users.filter((user) => {
 		if (Date.now() - user.lastActiveTimestamp < 300000) {
@@ -809,32 +818,32 @@ setInterval(async () => {
 		}
 		return false;
 	});
-
+	
 	fs.writeFileSync("data.json", JSON.stringify({users, matches, antiRequestSpam}, null, 6));
-
+	
 	antiRequestSpam = antiRequestSpam.map((user) => {
 		if (user.requests > 20 && !user.timeouted) {
 			user.timeouted = true;
 			user.timeoutRemoveAt = Date.now() + process.env.TIMEOUT_DURATION * 60000;
 		}
-
+		
 		if (user.timeouted && Date.now() > user.timeoutRemoveAt) {
 			user.timeouted = false;
 			user.timeoutRemoveAt = 0;
 			user.requests = 0;
 		}
-
+		
 		if (!user.timeouted) {
 			user.requests = 0;
 		}
 		/* Made by DNAScanner with love */
 		return user;
 	});
-
+	
 	matches.forEach((match) => {
 		if (match.winner === null) {
 			const board = match.board;
-
+			
 			if (board[0] === board[1] && board[1] === board[2] && board[0] !== 0) {
 				// x x x
 				// - - -
@@ -882,3 +891,16 @@ setInterval(async () => {
 		}
 	});
 }, 500);
+
+let httpServer = http.createServer(app);
+let httpsServer = https.createServer(sslCredentials, app);
+
+httpServer.listen(process.env.PORT, () => {
+	console.log(`HTTP server running on port ${process.env.PORT}`);
+})
+
+if (sslEnabled) {
+	httpsServer.listen(process.env.HTTPS_PORT, () => {
+		console.log(`HTTPS server running on port ${process.env.HTTPS_PORT}`);
+	})
+}
